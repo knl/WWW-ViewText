@@ -15,6 +15,6 @@ eval "use Pod::Coverage $min_pc";
 plan skip_all => "Pod::Coverage $min_pc required for testing POD coverage"
     if $@;
 
-pod_coverage_ok( 'WebService::ViewText', {also_private => [qr/debug/]}, 'WebService::ViewText is covered');
+pod_coverage_ok( 'WWW::ViewText', {also_private => [qr/debug/]}, 'WWW::ViewText is covered');
 
 done_testing;

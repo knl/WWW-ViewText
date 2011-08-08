@@ -1,7 +1,7 @@
 use inc::Module::Install;
 
-name     'WebService-ViewText';
-all_from 'lib/WebService/ViewText.pm';
+name     'WWW-ViewText';
+all_from 'lib/WWW/ViewText.pm';
 author   q{Nikola Knezevic <laladelausanne@gmail.com>};
 license  'perl';
 

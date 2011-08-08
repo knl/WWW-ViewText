@@ -1,4 +1,4 @@
-package WebService::ViewText::Response;
+package WWW::ViewText::Response;
 
 use warnings;
 use strict;
@@ -20,9 +20,9 @@ sub new {
 };
 
 # ================================================================================
-package WebService::ViewText::Response::Item;
+package WWW::ViewText::Response::Item;
 
-use base qw/WebService::ViewText::Response/;
+use base qw/WWW::ViewText::Response/;
 sub accessors {
     qw/url title responseUrl content/
 }

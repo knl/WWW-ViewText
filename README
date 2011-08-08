@@ -1,4 +1,4 @@
-WebService-ViewText
+WWW-ViewText
 
 The README is used to introduce the module and provide instructions on
 how to install the module, any machine dependencies it may have (for
@@ -26,21 +26,21 @@ SUPPORT AND DOCUMENTATION
 After installing, you can find documentation for this module with the
 perldoc command.
 
-    perldoc WebService::ViewText
+    perldoc WWW::ViewText
 
 You can also look for information at:
 
     RT, CPAN's request tracker
-        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WebService-ViewText
+        http://rt.cpan.org/NoAuth/Bugs.html?Dist=WWW-ViewText
 
     AnnoCPAN, Annotated CPAN documentation
-        http://annocpan.org/dist/WebService-ViewText
+        http://annocpan.org/dist/WWW-ViewText
 
     CPAN Ratings
-        http://cpanratings.perl.org/d/WebService-ViewText
+        http://cpanratings.perl.org/d/WWW-ViewText
 
     Search CPAN
-        http://search.cpan.org/dist/WebService-ViewText/
+        http://search.cpan.org/dist/WWW-ViewText/
 
 
 LICENSE AND COPYRIGHT

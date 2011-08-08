@@ -1,4 +1,4 @@
-package WebService::ViewText;
+package WWW::ViewText;
 
 use warnings;
 use strict;
@@ -6,11 +6,11 @@ use LWP::UserAgent;
 use Carp qw/croak carp/;
 use HTTP::Status ':constants';
 use JSON;
-use WebService::ViewText::Response;
+use WWW::ViewText::Response;
 
 =head1 NAME
 
-WebService::ViewText - Perl Interface to L<ViewText.org|http:/www.viewtext.org>
+WWW::ViewText - Perl Interface to L<ViewText.org|http:/www.viewtext.org>
 
 =head1 VERSION
 
@@ -26,9 +26,9 @@ our @res_headers = qw/
 
 =head1 SYNOPSIS
 
-    use WebService::ViewText;
+    use WWW::ViewText;
 
-    my $ril = WebService::ViewText->new(
+    my $ril = WWW::ViewText->new(
     );
     my $ret = $ril->text('http://www.google.com');
 
@@ -36,12 +36,12 @@ our @res_headers = qw/
 
 =head2 new
 
-    my $ril = WebService::ViewText->new(
+    my $ril = WWW::ViewText->new(
         ua     => $ua_config
         cache  => $cache,
     );
 
-Constructs B<WebService::ViewText> object.
+Constructs B<WWW::ViewText> object.
 It takes hash, which keys are B<cache>, and B<ua>.
 
 B<ua> is passed directly to L<LWP::UserAgent> constructor.  
@@ -103,7 +103,7 @@ sub text {
     });
 
 	return undef unless $ok;
-    my $ret = WebService::ViewText::Response::Item->new(
+    my $ret = WWW::ViewText::Response::Item->new(
         decode_json $res->content
     );
     $ret;
@@ -131,7 +131,7 @@ sub _format_read {
     my $cnt = 0;
 
     foreach my $item (@items) {
-        if ( ref $item && $item->isa('WebService::ViewText::Response::Item') ) {
+        if ( ref $item && $item->isa('WWW::ViewText::Response::Item') ) {
             $req->{$cnt} = { url => $item->url->as_string };
         }
         else {
@@ -206,13 +206,13 @@ Nikola Knezevic, C<< <laladelausanne at gmail.com> >>
 
 =head1 BUGS
 
-Please report any bugs or feature requests to C<github|https://github.com/knl/WebService-ViewText>
+Please report any bugs or feature requests to C<github|https://github.com/knl/WWW-ViewText>
 
 =head1 SUPPORT
 
 You can find documentation for this module with the perldoc command.
 
-    perldoc WebService::ViewText
+    perldoc WWW::ViewText
 
 =head1 LICENSE AND COPYRIGHT
 
@@ -227,4 +227,4 @@ See http://dev.perl.org/licenses/ for more information.
 
 =cut
 
-1; # End of WebService::ViewText
+1; # End of WWW::ViewText
